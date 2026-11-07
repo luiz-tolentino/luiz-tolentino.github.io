@@ -1,0 +1,187 @@
+/* Layout nativo de leitura da Visão Geral. Os elementos, dados e gráficos
+   originais são reutilizados; o canvas desktop permanece inalterado. */
+.mobile-hero-art {display:none;}
+.mobile-filter-trigger, .mobile-filter-dialog {display:none;}
+@media (max-width: 767px), (pointer:coarse) and (orientation: landscape) and (max-height: 600px) and (max-width: 1024px) {
+  html, body { margin:0; width:100% !important; min-width:0 !important; min-height:100% !important; overflow-x:clip; background:#f1f2f5 !important; }
+  #stage {
+    position:relative !important; left:0 !important; top:0 !important;
+    width:100% !important; height:auto !important; min-height:100vh !important;
+    transform:none !important; overflow:visible !important;
+    background:#f1f2f5 !important; padding:83px 14px 110px;
+    display:grid !important; grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    column-gap:10px; row-gap:11px; align-content:start;
+  }
+  #stage::before {
+    content:'MERCADO BRASILEIRO DE MOTOCICLETAS  ·  FENABRAVE 2026';
+    position:absolute; top:0; left:0; right:0; height:66px;
+    padding:14px 65px 12px 12px; border-left:0;
+    background:linear-gradient(105deg,#fff 65%,#fbe9eb); color:#24242b;
+    font-size:14px; font-weight:900; line-height:20px; letter-spacing:.1px;
+    box-shadow:0 3px 12px #1a1b2510;
+  }
+  #stage > :not(.nav) {min-width:0;}
+  #stage > .abs:not(.nav), #stage > .heading, #stage > .subheading,
+  #stage > #hhi, #stage > #structure, #stage > #donut, #stage > #insight {
+    position:relative !important; left:auto !important; right:auto !important;
+    top:auto !important; bottom:auto !important; transform:none !important;
+    width:100% !important;
+  }
+  #stage > #monthControl {
+    order:1; grid-column:1/-1; height:47px !important;
+    padding:7px 12px; margin-bottom:2px; font-size:13px; background:#fff;
+    border:1px solid #e0e1e6; box-shadow:none; border-radius:10px;
+  }
+  #monthControl select {min-height:34px; font-size:13px;}
+  #stage > .kpi {
+    height:106px !important; padding:12px 9px 11px !important;
+    margin:0; border:1px solid #e5e5ea; border-radius:13px;
+    background:#fff; box-shadow:0 2px 8px #2f34400d; gap:5px;
+  }
+  #stage > .kpi:nth-of-type(6) {order:2;}
+  #stage > .kpi:nth-of-type(7) {order:3;}
+  #stage > .kpi:nth-of-type(8) {order:4;}
+  #stage > .kpi:nth-of-type(9) {order:5;}
+  #stage > .kpi:nth-of-type(10) {order:6;}
+  #stage .kpi .icon {position:static; width:24px; height:24px; margin-bottom:1px;}
+  #stage .kpi .value {font-size:23px; line-height:1; letter-spacing:-.5px;}
+  #stage .kpi .label {font-size:11px; line-height:1.18;}
+  #stage .kpi .delta {font-size:10px; line-height:1.1;}
+  #stage > .heading {
+    grid-column:1/-1; font-size:16px !important; font-weight:800;
+    padding-left:12px; line-height:22px; margin:7px 0 -8px;
+  }
+  #stage > .heading::before {
+    content:''; position:absolute; left:0; top:2px;
+    width:5px; height:19px; border-radius:4px; background:#b20e16;
+  }
+  #stage > .subheading {grid-column:1/-1; font-size:11px; margin:-4px 0 0 12px;}
+  #stage > .heading:nth-of-type(11) {order:7;}
+  #stage > .subheading {order:8;}
+  #stage > #monthly {order:9; grid-column:1/-1; height:272px !important;}
+  #stage > .heading:nth-of-type(13) {order:10;}
+  #stage > .tiny.abs {order:11; grid-column:1/-1; display:none;}
+  #stage > #models {order:12; grid-column:1/-1;}
+  #stage > .heading:nth-of-type(16) {order:13;}
+  #stage > #hhi {order:14; grid-column:1/-1;}
+  #stage > .heading:nth-of-type(18) {order:15;}
+  #stage > #structure {order:16; grid-column:1/-1;}
+  #stage > .heading:nth-of-type(20) {order:17;}
+  #stage > #growth {order:18; grid-column:1/-1; height:286px !important;}
+  #stage > .heading:nth-of-type(22) {order:19;}
+  #stage > #donut {order:20; grid-column:1/-1; height:auto !important; min-height:325px;}
+  #stage > .heading:nth-of-type(24) {order:21;}
+  #stage > #insight {order:22; grid-column:1/-1; height:auto !important; min-height:125px;}
+  #stage > #foot {order:23; grid-column:1/-1; position:relative; right:auto; bottom:auto; text-align:right;}
+  #stage > #monthly, #stage > #models, #stage > #hhi, #stage > #structure,
+  #stage > #growth, #stage > #donut, #stage > #insight {
+    box-sizing:border-box !important; background:#fff; border:1px solid #e1e2e7; border-radius:13px;
+    box-shadow:0 2px 8px #2f34400d; padding:12px;
+  }
+  #stage > #models {padding:12px 10px;}
+  #models .modelrow {height:54px; grid-template-columns:25px minmax(62px,1fr) 24px minmax(70px,1.5fr) 58px; column-gap:4px;}
+  #models .modelrow .bartrack {height:21px;}
+  #stage > #hhi {text-align:left; padding:17px !important;}
+  #stage > #hhi .risk {top:18px; right:16px;}
+  #stage > #structure {padding:16px !important;}
+  #stage > #donut {padding:16px !important;}
+  #stage > #insight {padding:16px !important; font-size:13px; line-height:1.55;}
+  #stage > .nav {
+    position:fixed !important; top:auto !important; bottom:0 !important;
+    width:25% !important; height:68px !important; z-index:100;
+    padding:7px 2px 9px !important; margin:0; border:0 !important;
+    border-top:1px solid #e0e0e5 !important; border-radius:0 !important;
+    background:#fff !important; color:#6e6e78 !important;
+    display:flex !important; flex-direction:column; justify-content:center;
+    gap:4px; text-decoration:none !important; text-align:center;
+    font-size:11px !important; font-weight:700; box-shadow:0 -3px 15px #1517200e;
+  }
+  #stage > .nav.selected {color:#b20e16 !important; background:#fff5f6 !important;}
+  #stage > .nav:nth-of-type(1) {left:0 !important;}
+  #stage > .nav:nth-of-type(2) {left:25% !important;}
+  #stage > .nav:nth-of-type(3) {left:50% !important;}
+  #stage > .nav:nth-of-type(4) {left:75% !important;}
+  #stage > .nav img {width:20px; height:20px; filter:brightness(0) saturate(100%) opacity(.6);}
+  #stage > .nav.selected img {filter:none;}
+  body > .tour-help {top:11px !important; right:13px !important; bottom:auto !important; left:auto !important; z-index:20100;}
+  body > .mobile-view-toggle {display:none !important;}
+  .chart-tooltip {max-width:min(90vw,290px); white-space:normal;}
+  @media(max-width:360px){#stage{padding-left:10px;padding-right:10px;column-gap:8px}#stage .kpi .value{font-size:20px}}
+
+  /* Cabeçalho ilustrado e faixa de navegação inspirados na página desktop. */
+  #stage {padding-top:152px; padding-bottom:34px;}
+  #stage::before {
+    content:'Mercado Brasileiro de\A Motocicletas';
+    white-space:pre-line; height:74px; box-sizing:border-box;
+    padding:10px 112px 0 12px; border-left:0;
+    background-image:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.98) 38%,rgba(255,255,255,.4) 66%,rgba(255,255,255,.02) 100%);
+    background-size:100% 100%; background-position:center;
+    background-repeat:no-repeat; background-color:transparent;
+    z-index:2;
+    font-size:clamp(14px,3.9vw,17px); line-height:1.13;
+    text-transform:none; letter-spacing:-.3px;
+  }
+  #stage::after {
+    content:'Análise de emplacamentos e tendências';
+    position:absolute; left:18px; top:54px; right:6px; height:auto;
+    padding:0; background:transparent; white-space:nowrap;
+    color:#4a4a50; font-size:9px; line-height:1.3; font-weight:500;
+    pointer-events:none; z-index:3;
+  }
+  #stage > .mobile-hero-art {
+    position:absolute; display:block; right:0; top:0; width:100%; height:74px;
+    background:url('assets/Geral_-_Capa16647186151994509.jpg') no-repeat right top / 620px auto;
+    pointer-events:none; z-index:1;
+  }
+  #stage > .nav {
+    position:absolute !important; top:74px !important; bottom:auto !important;
+    width:25% !important; height:61px !important; z-index:40;
+    background:#a7111d !important; color:#fff !important;
+    border:0 !important; border-right:1px solid #ffffff35 !important;
+    box-shadow:0 4px 10px #1a1b2518; font-size:10px !important;
+    gap:3px; padding:8px 1px !important;
+  }
+  #stage > .nav.selected {
+    background:#fff !important; color:#a7111d !important;
+    border-top:3px solid #a7111d !important;
+  }
+  #stage > .nav[data-mobile-nav="geral"] {left:0 !important;}
+  #stage > .nav[data-mobile-nav="fabricantes"] {left:25% !important;}
+  #stage > .nav[data-mobile-nav="segmentos"] {left:50% !important;}
+  #stage > .nav[data-mobile-nav="modelos"] {left:75% !important;}
+  #stage > .nav:not(.selected) img {filter:none !important;}
+  #stage.mobile-nav-pinned > .nav {position:fixed !important; top:0 !important; width:20% !important;}
+  #stage.mobile-nav-pinned > .nav[data-mobile-nav="geral"] {left:0 !important;}
+  #stage.mobile-nav-pinned > .nav[data-mobile-nav="fabricantes"] {left:20% !important;}
+  #stage.mobile-nav-pinned > .nav[data-mobile-nav="segmentos"] {left:40% !important;}
+  #stage.mobile-nav-pinned > .nav[data-mobile-nav="modelos"] {left:60% !important;}
+  #stage > #monthControl {
+    position:relative !important; top:auto !important; z-index:1;
+    box-shadow:0 2px 8px #1b1c2910;
+  }
+  body > .tour-help {position:absolute !important; top:11px !important; right:12px !important; bottom:auto !important; width:33px; height:33px; font-size:17px;}
+  #stage > .mobile-filter-trigger {
+    position:fixed; display:none; top:0; right:0; width:20%; height:61px;
+    z-index:41; border:0; border-left:1px solid #ffffff40;
+    background:#8f0e19; color:#fff; font:700 10px Arial,sans-serif;
+    flex-direction:column; align-items:center; justify-content:center; gap:3px;
+    cursor:pointer; box-shadow:0 4px 10px #1a1b2518;
+  }
+  #stage.mobile-nav-pinned > .mobile-filter-trigger {display:flex;}
+  .mobile-filter-trigger svg {width:21px;height:21px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;}
+  dialog.mobile-filter-dialog {
+    display:none; position:fixed; inset:auto 0 0; margin:0; width:100%;
+    max-width:none; border:0; border-radius:18px 18px 0 0;
+    background:#fff; color:#24242a; padding:19px 18px 28px;
+    box-shadow:0 -8px 40px #0003; font:14px Arial,sans-serif;
+  }
+  dialog.mobile-filter-dialog[open] {display:block;}
+  dialog.mobile-filter-dialog::backdrop {background:#0c111b99;}
+  .mobile-filter-header {display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
+  .mobile-filter-header strong {font-size:20px;}
+  .mobile-filter-close {border:0;background:#f1f1f4;border-radius:9px;width:35px;height:35px;font-size:22px;}
+  .mobile-filter-field {display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
+  .mobile-filter-field label {font-weight:700;font-size:13px;}
+  .mobile-filter-field select {width:100%;min-height:47px;background:#f7f7fa;}
+  .mobile-filter-done {width:100%;min-height:44px;background:#a7111d;color:white;border:0;border-radius:9px;font-weight:700;}
+}

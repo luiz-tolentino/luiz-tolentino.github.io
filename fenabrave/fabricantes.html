@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fabricantes — Mercado Brasileiro de Motocicletas 2026</title>
+<link rel="stylesheet" href="fabricantes.css"><link rel="stylesheet" href="dashboard-ux.css"><script src="dashboard-ux.js"></script><link rel="stylesheet" href="tour.css?v=mobile-landscape-20261108"><script src="tour.js?v=mobile-landscape-20261108"></script><link rel="stylesheet" href="mobile-pages.css?v=8"><script src="mobile-pages.js?v=7" defer></script>
+</head><body>
+<main id="stage" aria-label="Dashboard de Fabricantes Fenabrave 2026">
+  <a class="nav abs" href="index.html" style="top:221px"><img src="assets/ICN_-_Home_Branco_Borda4894308224438463.png">Visão Geral</a>
+  <div class="nav selected abs" style="top:266px"><img src="assets/ICN_-_Fabrica_Red_Borda8795904866276042.png">Fabricantes</div>
+  <a class="nav abs" href="segmentos.html" style="top:311px"><img src="assets/ICN_-_Segmentos_Branco_Borda13957312813364164.png">Segmentos</a>
+  <a class="nav abs" href="modelos.html" style="top:356px"><img src="assets/ICN_-_Scooter_Branco_Borda7105592978666612.png">Modelos</a>
+  <div id="monthControl" class="abs"><label for="month"><img src="assets/ICN_-_Calendario_Grafite6865549145618536.png" alt="">Mês/Ano</label><select id="month" aria-label="Competência"></select></div>
+
+  <div class="kpi abs" style="left:155px"><img src="assets/ICN_-_L_der_Red_Borda7468733660722614.png" alt=""><div><strong id="leader"></strong><small>Marca Líder</small></div></div>
+  <div class="kpi abs" style="left:411px"><img src="assets/ICN_Card_-_Rosca_Red4186581648131179.png" alt=""><div><strong id="leaderShare"></strong><small>Share da Líder</small><span class="delta" id="leaderDelta"></span></div></div>
+  <div class="kpi abs" style="left:667px"><img src="assets/ICN_-_Ganho2581546209772906.png" alt=""><div><strong id="gainBrand"></strong><small>Maior Ganho de Share</small><span class="delta" id="gainValue"></span></div></div>
+  <div class="kpi abs" style="left:924px"><img src="assets/ICN_-_Perda09313171285003718.png" alt=""><div><strong id="lossBrand"></strong><small>Maior Perda de Share</small><span class="delta" id="lossValue"></span></div></div>
+  <div class="kpi abs" style="left:1186px"><img src="assets/ICN_-_Altera__o_Red_Borda5037335486592236.png" alt=""><div><strong id="rankBrand"></strong><small>Maior Mudança de Ranking</small><span class="delta" id="rankValue"></span></div></div>
+
+  <section class="abs insight" aria-label="Insight de fabricantes"><img src="assets/ICN_-_L_mpada_Red8196347658972339.png" alt=""><h2>Insight</h2><p id="insightText"></p></section>
+  <h2 class="heading" style="left:182px;top:390px">Ranking de Market Share</h2>
+  <div class="abs ranktable" id="ranking" style="left:170px;top:428px;width:394px;height:112px"></div>
+
+  <h2 class="heading" style="left:619px;top:390px">Variação de Participação <span>(p.p.)</span></h2>
+  <div class="abs" id="movement" style="left:615px;top:429px;width:316px;height:144px"></div>
+
+  <h2 class="heading" style="left:990px;top:390px">Performance Competitiva</h2>
+  <p class="abs chart-note" style="left:990px;top:417px">Variação de Volume (MoM %) × Variação de Share (p.p.)</p>
+  <div class="abs pc" id="competitive" style="left:982px;top:439px;width:425px;height:339px" aria-label="Dispersão por variação mensal de volume e participação de mercado"></div>
+
+  <h2 class="heading" style="left:182px;top:625px">Evolução do Market Share <span>– Top Fabricantes</span></h2>
+  <div class="abs" id="shareTrend" style="left:184px;top:661px;width:740px;height:137px"></div>
+
+  <h2 class="heading" style="left:182px;top:837px">Detalhamento por Fabricante</h2>
+  <div class="abs detail-scroll" style="left:169px;top:871px;width:1248px;height:187px"><table id="detailTable"><thead><tr><th>Rank</th><th>Fabricante</th><th>Emplacamentos</th><th>Market Share</th><th>Rank mês anterior</th><th>Δ Rank</th><th>MoM %</th><th>Δ Share (p.p.)</th><th>Gap p/ acima (p.p.)</th><th>Modelo Líder Fabricante</th></tr></thead><tbody></tbody></table></div>
+  <small class="abs source">Fonte: Fenabrave 2026</small>
+</main>
+<script src="vendor/echarts.min.js"></script>
+<script type="module" src="fabricantes.js?v=mobile-landscape-20261108"></script>
+</body></html>

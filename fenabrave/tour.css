@@ -1,0 +1,29 @@
+/* Tour de navegação: camada independente do dashboard aprovado. */
+.tour-help{position:fixed;right:15px;bottom:14px;z-index:9000;width:38px;height:38px;border-radius:50%;border:1px solid #fff8;background:#a3121d;color:#fff;font:800 20px/1 Arial,sans-serif;box-shadow:0 3px 12px #0004;cursor:pointer}
+.tour-help:hover{background:#890c16}.tour-help:focus-visible{outline:3px solid #e2a1a6;outline-offset:3px}
+.tour-layer{position:fixed;inset:0;z-index:20000;pointer-events:none;font-family:Arial,"Segoe UI",sans-serif}
+.tour-shade{position:fixed;background:rgba(18,20,28,.64);pointer-events:auto}
+.tour-outline{position:fixed;box-sizing:border-box;border:3px solid #cb1625;border-radius:11px;box-shadow:0 0 0 4px #fff9,0 4px 18px #0006;pointer-events:none;transition:left .18s,top .18s,width .18s,height .18s}
+.tour-popover{position:fixed;box-sizing:border-box;width:340px;max-width:calc(100vw - 24px);padding:17px 18px 15px;border-radius:14px;border:1px solid #e5c4c8;border-left:5px solid #b20e16;background:#fff;color:#24242a;box-shadow:0 16px 52px #0006;pointer-events:auto}
+.tour-progress{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;font-size:11px;font-weight:700;letter-spacing:.04em;color:#aa1420;text-transform:uppercase}
+.tour-dots{display:flex;gap:5px}.tour-dots span{display:block;width:6px;height:6px;border-radius:9px;background:#e7c5c9}.tour-dots span.active{width:16px;background:#ad111d}
+.tour-popover h2{font:800 19px/1.25 Arial,sans-serif;margin:0 0 9px;color:#222}
+.tour-popover p{font:13px/1.5 Arial,sans-serif;margin:0;color:#4b4b54}
+.tour-actions{display:flex;align-items:center;gap:8px;justify-content:flex-end;margin-top:17px}
+.tour-actions button{border-radius:7px;padding:9px 12px;font:700 12px/1.2 Arial,sans-serif;cursor:pointer;border:1px solid #dedee3;background:#fff;color:#555}
+.tour-actions button.tour-next{background:#a3121d;color:#fff;border-color:#a3121d}
+.tour-actions button:focus-visible{outline:3px solid #efb8bd;outline-offset:2px}
+.tour-actions .tour-skip{margin-right:auto;border-color:transparent;color:#777}
+.tour-actions button:disabled{visibility:hidden}
+@media(max-width:767px), (pointer:coarse) and (orientation:landscape) and (max-height:600px) and (max-width:1024px){
+  dialog.tour-mobile-dialog{position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:transparent;overflow:hidden;color:inherit}
+  dialog.tour-mobile-dialog::backdrop{background:transparent}
+  .tour-mobile-dialog .tour-shade{display:block;background:rgba(18,20,28,.53)}
+  .tour-mobile-dialog .tour-outline{display:block;border-width:2px;box-shadow:0 0 0 2px #fffc}
+  .tour-mobile-dialog .tour-popover{position:fixed;width:calc(100vw - 24px);max-width:430px;max-height:min(48dvh,290px);overflow-y:auto;left:50%!important;top:auto!important;bottom:max(12px,env(safe-area-inset-bottom))!important;right:auto;transform:translateX(-50%);padding:15px 15px 13px}
+  .tour-popover h2{font-size:18px}
+  .tour-popover p{font-size:13px;line-height:1.4}
+  .tour-actions{margin-top:11px;gap:5px}
+  .tour-actions button{padding:10px 11px;min-height:39px}
+  .tour-help{right:12px;bottom:12px}
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mercado Brasileiro de Motocicletas — Fenabrave 2026</title>
+  <link rel="stylesheet" href="dashboard-ux.css"><script src="dashboard-ux.js"></script>
+  <link rel="stylesheet" href="tour.css?v=mobile-landscape-20261108"><script src="tour.js?v=mobile-landscape-20261108"></script>
+  <style>
+    :root{font-family:Arial,"Segoe UI",sans-serif;color:#1d1d1d;background:#e8e8e8}
+    *{box-sizing:border-box}body{margin:0;overflow:auto}#stage{position:absolute;left:50%;top:0;width:1450px;height:1086px;transform-origin:top left;background:#f5f5f8 url('assets/Geral_-_Capa16647186151994509.jpg') no-repeat center/100% 100%;overflow:hidden}
+    .abs{position:absolute}.nav{left:8px;width:128px;height:38px;display:grid;grid-template-columns:24px 1fr;align-items:center;column-gap:6px;padding:0 8px;color:#fff;font-size:12px;font-weight:700;cursor:default}.nav.selected{background:#f5f5f8;color:#ad0b15;border:2px solid #d9bcc0;border-radius:5px}.nav:not(.selected){border:1px solid #c76d73;background:#a3121d;border-radius:5px}.nav img{width:22px;height:22px;object-fit:contain;object-position:center;display:block;justify-self:center}
+    #monthControl{top:128px;left:1187px;width:244px;height:34px;display:flex;gap:7px;align-items:center;justify-content:space-between;font-size:13px;font-weight:600;border:1px solid #d0d0d5;background:#f7f7fa;border-radius:5px;padding:2px 8px;box-shadow:0 2px 5px #0001}select{font:inherit;background:#f3f4f8;border:1px solid #c7c9d1;border-radius:4px;padding:5px 9px;color:#2a2a2a;cursor:pointer;min-width:116px}
+    .kpi{top:177px;height:92px;display:flex;align-items:center;padding-left:64px;gap:5px;flex-direction:column;justify-content:center;text-align:center}.kpi .value{font-weight:800;font-size:30px;line-height:1.02}.kpi .label{font-size:11px}.kpi .delta{font-size:11px;color:#b5262e;font-weight:700}.good{color:#168a4a!important}.kpi .icon{position:absolute;left:15px;top:25px;width:39px;height:39px;object-fit:contain}
+    .heading{position:absolute;font-weight:700;font-size:17px;transform:translateY(2px)}.subheading{position:absolute;font-size:11px;color:#555}
+    #monthly{left:163px;top:352px;width:550px;height:278px}#growth{left:163px;top:718px;width:540px;height:334px}svg{overflow:visible}.axis{stroke:#e1e1e3;stroke-width:1}.axislabel{font-size:11px;fill:#555}.point{cursor:pointer}.chart-tooltip{position:fixed;pointer-events:none;background:#fff;border:1px solid #c3c3c3;border-radius:6px;padding:8px 10px;box-shadow:0 5px 22px #0002;z-index:5;font-size:12px;display:none;white-space:nowrap}
+    #models{left:746px;top:370px;width:352px}#models .modelrow{height:52px;display:grid;grid-template-columns:29px 63px 21px 1fr 59px;align-items:center;column-gap:4px;font-size:11px}#models .modelrow .name{font-weight:700}.modelrow .brandlogo{width:27px;height:23px;object-fit:contain}.modelrow .rank{color:#777;text-align:center;font-weight:700}.modelrow .rank.up{color:#168a4a}.modelrow .rank.down{color:#c62828}.modelrow .rank.new{color:#8b1e1e;font-size:8px}.modelrow .bartrack{height:27px;border-radius:6px;background:#f8dfe2;overflow:hidden}.modelrow .bar{height:100%;border-radius:5px;background:#c91625}.modelrow .qty{text-align:right;font-weight:700}
+    #hhi{top:355px;left:1142px;width:272px;text-align:left;padding-left:5px}#hhi .hhi-value{font-size:35px;font-weight:800}#hhi .risk{position:absolute;right:10px;top:12px;padding:3px 16px;border-radius:14px;background:#bb1220;color:white;font-size:13px;font-weight:bold}#hhi .gradient{height:24px;width:100%;margin-top:8px;border-radius:6px;background:linear-gradient(90deg,#f3a6af 0%,#ea6470 43%,#bf1423 100%)}#hhi .range{display:flex;justify-content:space-between;font-size:10px;color:#777;margin-top:6px}
+    #structure{left:1150px;top:550px;width:265px;text-align:center;font-size:12px}#structure .tiles{display:flex;gap:9px}#structure .tile{flex:1;border-radius:7px;background:#fceced;padding:8px 2px}.tile strong{display:block;color:#bc1724;font-size:19px;padding:4px 0}.chip{background:#fceced;margin-top:15px;padding:5px;border-radius:8px;color:#b61220;font-size:11px;font-weight:bold}
+    #donut{left:760px;top:726px;width:348px;height:310px;display:flex;flex-direction:column;align-items:center}#ring{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:conic-gradient(#bc0e1b 0 66.6%,#dd5260 66.6% 80.4%,#f2adb6 80.4% 86.4%,#e0e1e8 86.4% 100%)}#ringinner{background:#f5f5f7;border-radius:50%;width:91px;height:91px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px}#ringinner strong{font-size:20px;color:#b70c19}#legend{width:100%;font-size:12px;margin-top:10px}#legend .row,#legend .legend-head{display:grid;grid-template-columns:15px minmax(0,1fr) 61px 70px;gap:5px;padding:5px;border-bottom:1px solid #eee;align-items:center}#legend .legend-head{font-size:10px;color:#555;font-weight:700;border-bottom:1px solid #ccc}#legend .pp{font-size:11px;text-align:right}.pp.positive{color:#168a4a}.pp.negative{color:#c62828}
+    #insight{left:1148px;top:728px;width:268px;height:305px;padding:10px 12px;font-family:'Segoe UI',Arial,sans-serif;font-size:14px;line-height:1.55;color:#252525}#insight .accent{font-weight:700;color:#b20e16}#insight .period{font-weight:700;color:#8b1e1e}#insight .up{font-weight:700;color:#168a4a}#insight .down{font-weight:700;color:#c62828}
+    .tiny{font-size:11px;color:#777}#foot{position:absolute;bottom:2px;right:12px;font-size:10px;color:#aaa}
+    @media(max-width:700px){body{background:#f4f4f4}}
+  </style>
+  <link rel="stylesheet" href="mobile-general.css?v=6">
+</head>
+<body>
+  <main id="stage" aria-label="Reprodução experimental da página Geral do dashboard">
+    <div class="mobile-hero-art" aria-hidden="true"></div>
+    <div class="nav selected abs" data-mobile-nav="geral" style="top:221px"><img src="assets/ICN_-_Home_Red_Borda7995942455523318.png">Visão Geral</div>
+    <a class="nav abs" data-mobile-nav="fabricantes" href="fabricantes.html" style="top:266px;text-decoration:none;cursor:pointer"><img src="assets/ICN_-_Fabrica_Branco_Borda9813917904026653.png">Fabricantes</a>
+    <a class="nav abs" data-mobile-nav="segmentos" href="segmentos.html" style="top:311px;text-decoration:none;cursor:pointer"><img src="assets/ICN_-_Segmentos_Branco_Borda13957312813364164.png">Segmentos</a>
+    <a class="nav abs" data-mobile-nav="modelos" href="modelos.html" style="top:356px"><img src="assets/ICN_-_Scooter_Branco_Borda7105592978666612.png">Modelos</a>
+    <div class="abs" id="monthControl"><label for="month" style="display:flex;align-items:center;gap:5px;white-space:nowrap"><img src="assets/ICN_-_Calendario_Grafite6865549145618536.png" alt="" style="width:17px;height:17px;object-fit:contain">Mês/Ano</label><select id="month" aria-label="Mês e ano"></select></div>
+    <div class="kpi abs" style="left:158px;width:242px"><img class="icon" src="assets/ICN_Card_-_Moto_Red6324615429901626.png"><span class="value" id="kpiMonth"></span><span class="label">Emplacamentos</span><span class="delta" id="kpiMoM"></span></div>
+    <div class="kpi abs" style="left:414px;width:244px"><img class="icon" src="assets/ICN_Card_-_Data_Red46757233884809357.png"><span class="value" id="kpiYTD">1.578.714</span><span class="label">Acumulado 2026</span><span class="delta good">▲ +12,1% vs. 2025</span></div>
+    <div class="kpi abs" style="left:669px;width:247px"><img class="icon" src="assets/ICN_Card_-_Rosca_Red4186581648131179.png"><span class="value" id="kpiTop3"></span><span class="label">Share Top 3 %</span><span class="delta good" id="kpiShareDelta"></span></div>
+    <div class="kpi abs" style="left:932px;width:244px"><img class="icon" src="assets/ICN_Card_-_Grafico_Red8015552603276457.png"><span class="value" id="kpiYoY"></span><span class="label">Variação Anual</span><span class="delta" id="kpiYoYDetail"></span></div>
+    <div class="kpi abs" style="left:1187px;width:244px"><img class="icon" src="assets/ICN_Card_-_Raio_Red9202339617712906.png"><span class="value" id="kpiElectric">1,13%</span><span class="label">Participação Eletrificados</span><span class="delta" id="kpiElectricDelta"></span></div>
+    <div class="heading" style="left:181px;top:300px">Emplacamentos Mensais</div><div class="subheading" style="left:181px;top:324px">2026 vs. 2025</div>
+    <div class="abs" id="monthly"></div>
+    <div class="heading" style="left:753px;top:300px">Top 5 Modelos <span id="modelTitle" style="color:#bc1823"></span></div>
+    <div class="abs tiny" style="left:754px;top:344px">MODELO　　　 RANK　 EMPLACAMENTOS　　　　　 VOLUME</div><div class="abs" id="models"></div>
+    <div class="heading" style="left:1161px;top:300px">HHI <span style="font-weight:400;font-size:13px">(Concentração de Mercado)</span></div>
+    <div id="hhi" class="abs"><div class="hhi-value" id="hhiValue">4.695</div><span class="risk">Alta</span><div class="gradient"></div><div class="range"><span>0</span><span>1.500</span><span>2.500</span><span>5.000</span></div></div>
+    <div class="heading" style="left:1161px;top:494px">Estrutura Competitiva</div>
+    <div id="structure" class="abs"><div class="tiles"><div class="tile">Gap 1º × 2º<strong id="gap">52,9 p.p.</strong></div><div class="tile">Share Top 5<strong id="top5">92,3%</strong></div></div><div class="chip">⌛ Liderança elevada</div></div>
+    <div class="heading" style="left:181px;top:694px">Ritmo de Crescimento <span style="font-weight:400;font-size:13px">(MoM e YoY)</span></div><div id="growth" class="abs"></div>
+    <div class="heading" style="left:753px;top:694px">Participação por Fabricante</div>
+    <div id="donut" class="abs"><div id="ring"><div id="ringinner"><span class="tiny">LÍDER</span><b id="leader">HONDA</b><strong id="leaderShare">66,6%</strong></div></div><div id="legend"></div></div>
+    <div class="heading" style="left:1161px;top:691px;color:#b61220;font-size:22px;display:flex;align-items:center;gap:7px"><img src="assets/ICN_-_L_mpada_Red8196347658972339.png" alt="" style="width:25px;height:25px;object-fit:contain">Insight</div><div id="insight" class="abs"></div>
+    <div id="foot">Fonte: Fenabrave 2026</div>
+  </main>
+  <div id="tooltip" class="chart-tooltip" role="tooltip"></div>
+  <script src="vendor/echarts.min.js"></script>
+  <script src="charts.js?v=mobile-landscape-20261108"></script>
+  <script src="app.js?v=ux-mobile-navegacao-20261107"></script>
+  <script src="mobile-general.js?v=4"></script>
+</body></html>

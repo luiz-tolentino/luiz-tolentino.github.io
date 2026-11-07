@@ -1,0 +1,29 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modelos & Ranking — Fenabrave 2026</title><link rel="stylesheet" href="modelos.css"><link rel="stylesheet" href="dashboard-ux.css"><script src="dashboard-ux.js"></script><link rel="stylesheet" href="tour.css?v=mobile-landscape-20261108"><script src="tour.js?v=mobile-landscape-20261108"></script><link rel="stylesheet" href="mobile-pages.css?v=8"><script src="mobile-pages.js?v=7" defer></script></head><body>
+<main id="stage" aria-label="Dashboard Modelos e Ranking Fenabrave 2026">
+  <a class="nav abs" href="index.html" style="top:221px"><img src="assets/ICN_-_Home_Branco_Borda4894308224438463.png" alt="">Visão Geral</a>
+  <a class="nav abs" href="fabricantes.html" style="top:266px"><img src="assets/ICN_-_Fabrica_Branco_Borda9813917904026653.png" alt="">Fabricantes</a>
+  <a class="nav abs" href="segmentos.html" style="top:311px"><img src="assets/ICN_-_Segmentos_Branco_Borda13957312813364164.png" alt="">Segmentos</a>
+  <div class="nav selected abs" style="top:356px"><img src="assets/ICN_-_Scooter_Vermelha_Borda1640367020115543.png" alt="">Modelos</div>
+  <div class="abs control" id="monthControl"><label for="month"><img src="assets/ICN_-_Calendario_Grafite6865549145618536.png" alt="">Mês/Ano</label><select id="month" aria-label="Mês e ano"></select></div>
+  <div class="abs control" id="segmentControl"><label for="segment"><img src="assets/ICN_-_Segmentos_Red_Borda6117020093305334.png" alt="">Subsegmento</label><select id="segment" aria-label="Subsegmento"></select></div>
+
+  <div class="kpi abs" style="left:155px"><img src="assets/ICN_-_L_der_Red_Borda7468733660722614.png" alt=""><div><strong id="leader"></strong><small>Modelo Líder</small></div></div>
+  <div class="kpi abs" style="left:411px"><img src="assets/ICN_Card_-_Moto_Red6324615429901626.png" alt=""><div><strong id="leaderQty"></strong><small>Emplacamentos do Líder</small></div></div>
+  <div class="kpi abs" style="left:667px"><img src="assets/ICN_Card_-_Pizza_Red10225109709077174.png" alt=""><div><strong id="leaderShare"></strong><small>Share do Líder</small><span class="delta" id="leaderShareDelta"></span></div></div>
+  <div class="kpi abs" style="left:924px"><img src="assets/ICN_-_Ganho2581546209772906.png" alt=""><div><strong id="growth"></strong><small id="growthLabel">Maior Crescimento MoM</small><span class="delta" id="growthDelta"></span></div></div>
+  <div class="kpi abs" style="left:1186px"><img src="assets/ICN_-_Perda09313171285003718.png" alt=""><div><strong id="decline"></strong><small>Maior Queda MoM</small><span class="delta" id="declineDelta"></span></div></div>
+
+  <section class="insight abs" aria-label="Insight de modelos"><img src="assets/ICN_-_L_mpada_Red8196347658972339.png" alt=""><h2>Insight</h2><p id="insightText"></p></section>
+  <h2 class="heading" style="left:182px;top:395px">Ranking Visual de Modelos <span id="rankingPeriod"></span></h2>
+  <div class="abs rank-switch" role="group" aria-label="Exibição do ranking"><button type="button" id="modeVisual" aria-pressed="true">Cards visuais</button><button type="button" id="modeTable" aria-pressed="false">Tabela detalhada</button></div>
+  <div class="abs ranking" id="ranking" style="left:175px;top:435px;width:1238px;height:313px"></div>
+  <div class="abs visual-ranking" id="rankingCards" style="left:175px;top:430px;width:1238px;height:313px" hidden></div>
+  <h2 class="heading" style="left:182px;top:775px">Evolução dos Principais Modelos <span>– 2026</span></h2>
+  <div class="abs" id="evolution" style="left:176px;top:814px;width:577px;height:241px"></div>
+  <h2 class="heading" style="left:826px;top:775px">Ganho e Perda de Participação <span>(p.p.)</span></h2>
+  <div class="abs" id="movement" style="left:808px;top:814px;width:599px;height:241px"></div>
+  <small class="abs source">Fonte: Fenabrave 2026</small>
+</main>
+<script src="vendor/echarts.min.js"></script><script type="module" src="modelos.js?v=mobile-landscape-20261108"></script>
+</body></html>

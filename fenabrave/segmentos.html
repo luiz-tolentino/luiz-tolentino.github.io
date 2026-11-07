@@ -1,0 +1,28 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Segmentos & Regiões — Fenabrave 2026</title><link rel="stylesheet" href="segmentos.css"><link rel="stylesheet" href="dashboard-ux.css"><script src="dashboard-ux.js"></script><link rel="stylesheet" href="tour.css?v=mobile-landscape-20261108"><script src="tour.js?v=mobile-landscape-20261108"></script><link rel="stylesheet" href="mobile-pages.css?v=8"><script src="mobile-pages.js?v=7" defer></script></head><body>
+<main id="stage" aria-label="Dashboard Segmentos e Regiões Fenabrave 2026">
+  <a class="nav abs" href="index.html" style="top:221px"><img src="assets/ICN_-_Home_Branco_Borda4894308224438463.png" alt="">Visão Geral</a>
+  <a class="nav abs" href="fabricantes.html" style="top:266px"><img src="assets/ICN_-_Fabrica_Branco_Borda9813917904026653.png" alt="">Fabricantes</a>
+  <div class="nav selected abs" style="top:311px"><img src="assets/ICN_-_Segmentos_Red_Borda6117020093305334.png" alt="">Segmentos</div>
+  <a class="nav abs" href="modelos.html" style="top:356px"><img src="assets/ICN_-_Scooter_Branco_Borda7105592978666612.png" alt="">Modelos</a>
+  <div class="abs" id="monthControl"><label for="month"><img src="assets/ICN_-_Calendario_Grafite6865549145618536.png" alt="">Mês/Ano</label><select id="month" aria-label="Mês e ano"></select></div>
+
+  <div class="kpi abs" style="left:155px"><img src="assets/ICN_-_L_der_Red_Borda7468733660722614.png" alt=""><div><strong id="segmentLeader"></strong><small>Subsegmento Líder</small></div></div>
+  <div class="kpi abs" style="left:411px"><img src="assets/ICN_Card_-_Pizza_Red10225109709077174.png" alt=""><div><strong id="segmentShare"></strong><small>Share Líder</small><span class="delta" id="shareDelta"></span></div></div>
+  <div class="kpi abs" style="left:667px"><img src="assets/ICN_Card_-_Rosca_Red4186581648131179.png" alt=""><div><strong id="top3Share"></strong><small>Concentração Top 3</small></div></div>
+  <div class="kpi abs" style="left:924px"><img src="assets/ICN_Card_-_Regi_o_Red07612940672090696.png" alt=""><div><strong id="regionLeader"></strong><small>Região Líder</small><span class="delta muted" id="regionLeaderShare"></span></div></div>
+  <div class="kpi abs" style="left:1186px"><img src="assets/ICN_Card_-_Grafico_Red8015552603276457.png" alt=""><div><strong id="regionGain"></strong><small>Destaque Regional</small><span class="delta" id="regionGainDelta"></span></div></div>
+
+  <section class="insight abs" aria-label="Insight de segmentos e regiões"><img src="assets/ICN_-_L_mpada_Red8196347658972339.png" alt=""><h2>Insight</h2><p id="insightText"></p></section>
+  <h2 class="heading" style="left:182px;top:380px">Composição por Subsegmento</h2>
+  <div class="abs" id="composition" style="left:176px;top:418px;width:575px;height:165px"></div>
+  <h2 class="heading" style="left:182px;top:626px">Movimento dos Subsegmentos <span>(p.p.)</span></h2>
+  <div class="abs" id="movement" style="left:176px;top:666px;width:575px;height:153px"></div>
+  <h2 class="heading" style="left:823px;top:380px">Mapa Regional do Brasil</h2>
+  <div class="abs region-map" id="regionalMap" style="left:808px;top:425px;width:602px;height:380px"></div>
+  <h2 class="heading" style="left:182px;top:852px">Evolução dos Principais Subsegmentos <span>– 2026</span></h2>
+  <div class="abs" id="trend" style="left:176px;top:890px;width:1225px;height:165px"></div>
+  <small class="abs source">Fonte: Fenabrave 2026</small>
+</main>
+<script src="vendor/echarts.min.js"></script><script type="module" src="segmentos.js?v=mobile-landscape-20261108"></script>
+</body></html>
